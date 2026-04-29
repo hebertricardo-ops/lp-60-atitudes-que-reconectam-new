@@ -18,6 +18,9 @@ import { CTAButton } from "@/components/landing/CTAButton";
 import { Faq } from "@/components/landing/Faq";
 import mockupHero from "@/assets/mockup-hero.jpeg";
 import materialBundle from "@/assets/material-bundle.jpeg";
+import depoimento1 from "@/assets/depoimento-1.png";
+import depoimento2 from "@/assets/depoimento-2.png";
+import depoimento3 from "@/assets/depoimento-3.png";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -61,16 +64,22 @@ const heroBenefits = [
 
 const testimonials = [
   {
-    name: "J. M., 39 anos",
+    name: "Jamila Martins, 39 anos",
+    role: "Professora",
     text: "Mandei a mensagem número 12 do bônus no meio do expediente dele. Ele me respondeu na hora perguntando se eu queria jantar fora. Fazia meses que a gente não saía da rotina!",
+    avatar: depoimento1 as string | null,
   },
   {
-    name: "C. A., 36 anos",
+    name: "Carolina Araujo, 36 anos",
+    role: "Dona de Casa",
     text: "Sempre dava briga quando eu reclamava do celular na mesa. Usei a técnica da substituição do Módulo 2 e, pela primeira vez, ele me ouviu, pediu desculpas e guardou o aparelho.",
+    avatar: depoimento2 as string | null,
   },
   {
-    name: "M. S., 41 anos",
+    name: "Mariana Salles, 41 anos",
+    role: "Empresária",
     text: "Não acredito que custou tão barato. O Checklist de preparação me salvou de uma discussão terrível neste fim de semana. Estamos mais leves.",
+    avatar: depoimento3 as string | null,
   },
 ];
 
@@ -266,11 +275,19 @@ function Landing() {
               <p className="mt-4 flex-1 italic leading-relaxed text-charcoal">"{t.text}"</p>
               <div className="mt-6 flex items-center gap-3 border-t border-border pt-5">
                 <div className="h-12 w-12 shrink-0">
-                  <Placeholder ratio="1/1" label="" rounded="rounded-full" />
+                  {t.avatar ? (
+                    <img
+                      src={t.avatar}
+                      alt={t.name}
+                      className="h-12 w-12 rounded-full object-cover"
+                    />
+                  ) : (
+                    <Placeholder ratio="1/1" label="" rounded="rounded-full" />
+                  )}
                 </div>
                 <div>
                   <p className="font-semibold text-charcoal">{t.name}</p>
-                  <p className="text-xs uppercase tracking-wider text-muted-foreground">Beta Tester</p>
+                  <p className="text-xs uppercase tracking-wider text-muted-foreground">{t.role}</p>
                 </div>
               </div>
             </article>

@@ -22,6 +22,10 @@ const faqs = [
     q: "4. E se não funcionar para mim?",
     a: "Você tem 7 dias de garantia incondicional protegidos por lei. O reembolso é feito direto pela Hotmart. Basta acessar a sua conta na plataforma e solicitar o cancelamento, sem dor de cabeça, sem precisar pedir satisfação e sem precisar enviar e-mail para ninguém. Simples e totalmente seguro.",
   },
+  {
+    q: "5. O pagamento é seguro?",
+    a: "Sim, 100%. Todo o pagamento é processado pela Hotmart, a plataforma de pagamentos e venda de infoprodutos mais segura e confiável do Brasil. Seus dados financeiros nunca passam por nós — a Hotmart cuida de tudo com criptografia de ponta a ponta, aceitando Pix, cartão de crédito e boleto bancário.",
+  },
 ];
 
 export function Faq() {

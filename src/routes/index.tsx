@@ -515,11 +515,10 @@ function Landing() {
         <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-2 lg:gap-8">
           {/* Card 1 — Básico */}
           <div className="flex flex-col rounded-3xl bg-card p-8 shadow-soft sm:p-10">
-            <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">Opção 1</p>
-            <h3 className="mt-2 font-serif text-2xl text-charcoal">Pacote Básico</h3>
-            <p className="mt-2 text-sm text-muted-foreground">O essencial para dar o primeiro passo.</p>
+            <h3 className="text-center font-serif text-2xl text-charcoal">Pacote Básico</h3>
+            <p className="mt-2 text-center text-sm text-muted-foreground">O essencial para dar o primeiro passo.</p>
 
-            <div className="mt-6 flex items-baseline gap-2">
+            <div className="mt-6 flex items-baseline justify-center gap-2">
               <span className="font-serif text-5xl text-charcoal">R$ 17,90</span>
               <span className="text-sm text-muted-foreground">único</span>
             </div>
@@ -553,13 +552,12 @@ function Landing() {
               ⭐ Mais escolhido
             </span>
 
-            <p className="text-xs font-semibold uppercase tracking-wider text-rose-deep">Opção 2</p>
-            <h3 className="mt-2 font-serif text-2xl text-charcoal">Pacote Completo</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
+            <h3 className="mt-2 text-center font-serif text-2xl text-charcoal">Pacote Completo</h3>
+            <p className="mt-2 text-center text-sm text-muted-foreground">
               A estrutura completa para resultados mais rápidos e sem esforço.
             </p>
 
-            <div className="mt-6 flex items-baseline gap-2">
+            <div className="mt-6 flex items-baseline justify-center gap-2">
               <span className="font-serif text-5xl text-rose-deep">R$ 27,90</span>
               <span className="text-sm text-muted-foreground">único</span>
             </div>
@@ -593,7 +591,7 @@ function Landing() {
               </li>
             </ul>
 
-            <div className="mt-8">
+            <div className="mt-8 flex flex-col items-center">
               <CTAButton size="xl" pulse>
                 Sim! Quero o pacote completo
               </CTAButton>

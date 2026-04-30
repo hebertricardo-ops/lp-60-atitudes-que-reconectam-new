@@ -21,6 +21,7 @@ import materialBundle from "@/assets/material-bundle.jpeg";
 import depoimento1 from "@/assets/depoimento-1.png";
 import depoimento2 from "@/assets/depoimento-2.png";
 import depoimento3 from "@/assets/depoimento-3.png";
+import casalDistancia from "@/assets/casal-distancia.png";
 
 export const Route = createFileRoute("/")({
   component: Landing,
@@ -296,6 +297,15 @@ function Landing() {
               </li>
             ))}
           </ul>
+
+          <div className="mt-10 overflow-hidden rounded-3xl shadow-soft">
+            <img
+              src={casalDistancia}
+              alt="Casal no sofá: mulher pensativa enquanto marido olha para o celular"
+              loading="lazy"
+              className="w-full object-cover"
+            />
+          </div>
 
           <div className="mt-12 space-y-5 text-lg leading-relaxed text-muted-foreground">
             <p>

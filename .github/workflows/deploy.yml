@@ -27,10 +27,11 @@ jobs:
       - name: Build de produção
         run: npm run build
 
-      - name: Publicar pasta dist no branch deploy
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Deploy via FTP para Hostinger
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          publish_branch: dist
-          force_orphan: true
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /public_html/

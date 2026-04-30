@@ -24,23 +24,6 @@ import depoimento3 from "@/assets/depoimento-3.png";
 
 export const Route = createFileRoute("/")({
   component: Landing,
-  head: () => ({
-    meta: [
-      { title: "60 Atitudes Simples — Reconecte seu casamento em 30 min/dia" },
-      {
-        name: "description",
-        content:
-          "Método silencioso para resgatar carinho, atenção e desejo no casamento aplicando uma atitude rápida por dia. Acesso imediato pelo celular.",
-      },
-      { property: "og:title", content: "60 Atitudes Simples — Reconecte seu casamento" },
-      {
-        property: "og:description",
-        content:
-          "MiniApp com 60 missões diárias para sair do modo 'colega de quarto' sem D.R., sem brigas e sem parecer carente.",
-      },
-      { property: "og:type", content: "website" },
-    ],
-  }),
 });
 
 const heroBenefits = [

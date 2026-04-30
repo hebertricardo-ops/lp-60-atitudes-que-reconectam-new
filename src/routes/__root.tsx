@@ -1,6 +1,4 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
+import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
 
 function NotFoundComponent() {
   return (
@@ -25,48 +23,9 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "60 Atitudes Simples — Reconecte seu casamento" },
-      { name: "description", content: "Método silencioso para resgatar carinho e desejo no casamento aplicando uma atitude rápida por dia. MiniApp com acesso imediato pelo celular." },
-      { name: "author", content: "60 Atitudes Simples" },
-      { property: "og:title", content: "60 Atitudes Simples — Reconecte seu casamento" },
-      { property: "og:description", content: "Método silencioso para resgatar carinho e desejo no casamento aplicando uma atitude rápida por dia. MiniApp com acesso imediato pelo celular." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "60 Atitudes Simples — Reconecte seu casamento" },
-      { name: "twitter:description", content: "Método silencioso para resgatar carinho e desejo no casamento aplicando uma atitude rápida por dia. MiniApp com acesso imediato pelo celular." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9ddccf78-cd6f-4b4b-8cba-b193b1c0159a/id-preview-d16fabf1--f774f178-1862-496e-852f-e3551dcfcc21.lovable.app-1777487717766.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/9ddccf78-cd6f-4b4b-8cba-b193b1c0159a/id-preview-d16fabf1--f774f178-1862-496e-852f-e3551dcfcc21.lovable.app-1777487717766.png" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   return <Outlet />;

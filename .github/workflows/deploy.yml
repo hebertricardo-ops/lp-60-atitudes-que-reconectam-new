@@ -27,11 +27,13 @@ jobs:
       - name: Build de produção
         run: npm run build
 
-      - name: Deploy via FTP para Hostinger
+      - name: Deploy via FTPS para Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
-          server: ${{ secrets.FTP_SERVER }}
+          server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          port: 21
           local-dir: ./dist/
           server-dir: /public_html/

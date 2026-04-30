@@ -539,7 +539,7 @@ function Landing() {
             </ul>
 
             <a
-              href="#"
+              href="https://pay.hotmart.com/S105614147X?off=9wb4gfjt&checkoutMode=10"
               className="mt-8 inline-flex w-full items-center justify-center rounded-full border border-charcoal/30 bg-transparent px-6 py-4 text-sm font-semibold text-charcoal transition hover:bg-charcoal hover:text-white"
             >
               Quero o pacote básico
@@ -592,12 +592,12 @@ function Landing() {
             </ul>
 
             <div className="mt-8 flex flex-col items-center">
-              <CTAButton size="xl" pulse>
+              <CTAButton href="https://pay.hotmart.com/S105614147X?off=p9vaf5ku&checkoutMode=10" size="xl" pulse>
                 Sim! Quero o pacote completo
               </CTAButton>
               <p className="mt-3 text-center text-xs text-muted-foreground">
                 Ou{" "}
-                <a href="#" className="underline hover:text-charcoal">
+                <a href="https://pay.hotmart.com/S105614147X?off=9wb4gfjt&checkoutMode=10" className="underline hover:text-charcoal">
                   clique aqui
                 </a>{" "}
                 para levar apenas o pacote básico por R$ 17,90
@@ -683,7 +683,7 @@ function Landing() {
               <p className="mt-2 text-sm text-muted-foreground">pagamento único · acesso vitalício</p>
 
               <div className="mt-8">
-                <CTAButton size="xl" pulse>
+                <CTAButton href="https://pay.hotmart.com/S105614147X?off=p9vaf5ku&checkoutMode=10" size="xl" pulse>
                   Quero acesso imediato ao pacote completo
                 </CTAButton>
               </div>
